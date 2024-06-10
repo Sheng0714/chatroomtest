@@ -1,1 +1,60 @@
-123
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chatroom</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="chat_bot_container">
+		<div class="chat_bot_title-container">
+			<!-- 聊天機器人的標題容器，包括圖片和標題 -->
+			
+			<p>chatroom</p>
+		</div>
+		<div class="msg_container">
+			<!-- 用於顯示聊天消息的容器 -->
+		</div>
+	
+		<div class="chat_container">
+			<form class="chat_form">
+				<div class="chat_frame">
+					<input type="text" class="chat_box" name="user_msg" autocomplete="off">
+					<!-- 用戶輸入消息的文本輸入框 -->
+					<button  class="chat_submit">發送</button>
+					<!-- 發送消息的按鈕 -->
+				</div>
+			</form>
+		</div>
+	</div>
+  
+   <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script type="module">
+      import { GoogleGenerativeAI } from "@google/generative-ai";
+
+      // Fetch your API_KEY
+      const API_KEY = "AIzaSyAWefMXze-pNaj_h--2qjDlsbOdRDdqSl8";
+
+      // Access your API key (see "Set up your API key" above)
+      const genAI = new GoogleGenerativeAI(API_KEY);
+
+      // ...
+
+      // The Gemini 1.5 models are versatile and work with most use cases
+      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
+
+      // ...
+    </script>
+ 
+  
+  
+
+  
+  
+</body>
+</html>
